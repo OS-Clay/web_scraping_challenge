@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
 
 
 from bs4 import BeautifulSoup as bs
@@ -11,13 +8,6 @@ import re
 import pandas as pd
 import os
 
-
-# In[2]:
-
-
-
-
-# In[ ]:
 
 def scrape ():
     browser = init_browser ()
@@ -70,7 +60,6 @@ def mars_news (browser):
     mars_news_final['description'] = most_recent_desc
 
     return mars_news_final
-# In[ ]:
 
 
 ###FEATURED MARS PIC
@@ -138,8 +127,6 @@ def mars_tweet (browser):
 
     return mars_weather_tweet
 
-
-# In[38]:
 
 
 ###MARS TABLE FACTS
@@ -220,7 +207,7 @@ def mars_hemispheres (browser):
     
         downloads = new_soup.find("div", class_="downloads").find("a")["href"]
     
-    #image_url = downloads.find("a")["href"]
+    
     
         hemisphere_image_urls.append({"title": title, "img_url": downloads})
     
@@ -229,12 +216,7 @@ def mars_hemispheres (browser):
 
     return mars_hemis
 
-# In[70]:
 
-
-
-
-# In[ ]:
 
 
 
